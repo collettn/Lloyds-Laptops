@@ -1,2 +1,2 @@
-# lloyds-laptop
+# lloyds-laptops
 Capstone App
