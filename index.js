@@ -3,9 +3,14 @@ import express from "express";
 import Router from "./config/router.js";
 import db from "./db/helpers.js"
 import appController from "./controller/appController.js";
+import path from 'path';
 
+//Fix from https://flaviocopes.com/fix-dirname-not-defined-es-module-scope/
+import { fileURLToPath } from "url";
 import { PORT } from "./config/environment.js"
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(express.json());
@@ -13,6 +18,7 @@ app.use(Router);
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/public'));
 //app.use(flash());
 
 app.post("/user/add", appController.addUser);
