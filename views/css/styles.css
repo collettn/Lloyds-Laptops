@@ -1,0 +1,4 @@
+.form-set   { display: table;      }
+.form-group { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }

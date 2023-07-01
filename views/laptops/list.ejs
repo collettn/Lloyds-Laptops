@@ -1,0 +1,60 @@
+<%- include("../partials/header") %>
+    <div> <a href="/" class="btn btn-primary ml-3">Home</a> </div>
+    <br>
+    <div><a href="http://localhost:3000/laptop/add"><button type="button">Add</button></a></div>
+    <table class="table" border="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Model</th>
+                <th scope="col">Manufacturer</th>
+                <th scope="col">CPU</th>
+                <th scope="col">Disk Size</th>
+                <th scope="col">Memory</th>
+                <th scope="col">Usage</th>
+                <th scope="col">Status</th>
+                <th width="200px">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% if(data.length){
+            for(var i = 0; i< data.length; i++) {%>
+            <tr>
+                <th scope="row">
+                    <%= (i+1) %>
+                </th>
+                <td>
+                    <%= data[i].model%>
+                </td>
+                <td>
+                    <%= data[i].manufacturer%>
+                </td>
+                <td>
+                    <%= data[i].cpu%>
+                </td>
+                <td>
+                    <%= data[i].disk%>
+                </td>
+                <td>
+                    <%= data[i].memory%>
+                </td>
+                <td>
+                    <%= data[i].usage%>
+                </td>
+                <td>
+                    <%= data[i].status%>
+                </td>
+                <td Align="Right"> 
+                    <a class="btn btn-success edit" href="../laptop/edit/<%= data[i]._id%>"><button type="button">Edit</button></a>&nbsp 
+                    <a class="btn btn-success edit" href="../laptop/delete/<%= data[i]._id%>"><button type="button">Delete</button></a> 
+                </td>
+            </tr>
+            <% }
+        }else{ %>
+        <tr>
+            <td colspan="8">No laptops</td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+<%- include("../partials/footer") %>

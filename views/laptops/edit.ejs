@@ -1,0 +1,37 @@
+<%- include("../partials/header") %>
+    <form action="/laptop/edit/<%= data._id %>" method="post" name="LaptopEdit">
+        <fieldset>
+            <Table>
+                <tr>            
+                    <td><label>Model: </label></td>
+                    <td><input type="text" class="form-control" name="model" id="model" value="<%=data.model %>" pleaceholder="Model"></td>
+                </tr>
+                <tr>
+                    <td><label>Manufacturer: </label></td>
+                    <td><input type="text" class="form-control" name="manufacturer" id="manufacturer" value="<%=data.manufacturer %>" pleaceholder="Manufacturer"></td>
+                </tr>
+                <tr>
+                    <td><label>CPU: </label></td>
+                    <td><input type="text" class="form-control" name="cpu" id="cpu" value="<%=data.cpu %>" pleaceholder="CPU"></td>
+                </tr>
+                <tr>
+                    <td><label>Disk Size: </label></td>
+                    <td><input type="text" class="form-control" name="disk" id="Disk" value="<%=data.disk %>" pleaceholder="Disk"></td>
+                </tr>
+                <tr>
+                    <td><label>Memory Size: </label></td>
+                    <td><input type="text" class="form-control" name="memory" id="memory" value="<%=data.memory %>" pleaceholder="Memory"></td>
+                </tr>
+                <tr>
+                    <td><label>Usage (Reuse|Recycle): </label></td>
+                    <td><input type="text" class="form-control" name="usage" id="usage" value="<%=data.usage %>" pleaceholder="Usage"></td>
+                </tr>
+                <tr>
+                    <td><label>Status (Reset|Cleaned|Locked): </label></td>
+                    <td><input type="text" class="form-control" name="status" id="status" value="<%=data.status %>" pleaceholder="Status"></td>
+                </tr>
+            </Table>
+        </fieldset>
+        <button type="submit" class="btn btn-info">Update</button>
+    </form>
+<%- include("../partials/footer") %>

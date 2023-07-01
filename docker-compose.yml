@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    container_name: lloyds-app
+    restart: always
+    environment:
+      - PORT=3000
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+  mongo:
+    container_name: lloyds-db
+    image: mongo
+    volumes:
+      - mongodb:/data/db
+    ports:
+      - '27017:27017'
+volumes:
+  mongodb:

@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+    <p>Do you wish to delete this record?</p>
+    <form action="/laptop/delete/<%= data._id %>" method="post" name="LaptopDelete">
+        <fieldset>
+            <Table>
+                <tr>            
+                    <td><label>Model: </label></td>
+                    <td><label><%=data.model %></label></td>
+                </tr>
+                <tr>
+                    <td><label>Manufacturer: </label></td>
+                    <td><Label><%=data.manufacturer %></Label></td>
+                </tr>
+                <tr>
+                    <td><label>CPU: </label></td>
+                    <td><label><%=data.cpu %></label></td>
+                </tr>
+                <tr>
+                    <td><label>Disk Size: </label></td>
+                    <td><label><%=data.disk %></label></td>
+                </tr>
+                <tr>
+                    <td><label>Memory Size: </label></td>
+                    <td><label><%=data.memory %></label></td>
+                </tr>
+                <tr>
+                    <td><label>Usage: </label></td>
+                    <td><label><%=data.usage %></label></td>
+                </tr>
+                <tr>
+                    <td><label>Status: </label></td>
+                    <td><label><%=data.status %></label></td>
+                </tr>
+            </Table>
+        </fieldset>
+        <button type="submit" class="btn btn-info">Delete</button>
+    </form>
+<%- include("../partials/footer") %>

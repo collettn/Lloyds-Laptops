@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+    <form id="laptopForm" action="/laptop/add" method="post">
+    <fieldset>
+        <table>
+            <tr>
+                <td><label>Model: </label></td>
+                <td><input type="text" name="model" id="model" name="LaptopAdd"></td>
+            </tr>
+            <tr>
+                <td><label>Manufacturer: </label></td>
+                <td><input type="text" name="manufacturer" id="manufacturer"></td>
+            </tr>
+            <tr>
+                <td><label>CPU: </label></td>
+                <td><input type="text" name="cpu" id="cpu"></td>
+            </tr>
+            <tr>
+                <td><label>Disk Size: </label></td>
+                <td><input type="text" name="disk" id="Disk"></td>
+            </tr>
+            <tr>
+                <td><label>Memory Size: </label></td>
+                <td><input type="text" name="memory" id="memory"></td>
+            </tr>
+            <tr>
+                <td><label>Usage (Reuse|Recycle): </label></td>
+                <td><input type="text" name="usage" id="usage"></td>
+            </tr>
+            <tr>
+                <td><label>Status (Reset|Cleaned|Locked): </label></td>
+                <td><input type="text" name="status" id="status"></td>
+            </tr>
+    </table>
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>
+<%- include("../partials/footer") %>

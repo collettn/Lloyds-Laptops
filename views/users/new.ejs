@@ -1,0 +1,25 @@
+<%- include("../partials/header") %>
+<form id="userForm" action="/user/add" method="post" name="UserAdd">
+    <fieldset>
+        <table>
+            <tr>
+                <td><label>First Name: </label></td>
+                <td><input type="text" name="firstname" id="firstname"></td>
+            </tr>
+            <tr>
+                <td><label>Last Name: </label></td>
+                <td><input type="text" name="lastname" id="lastname"></td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td><input type="text" name="address" id="address"></td>
+            </tr>
+            <tr>
+                <td><label>Type (Staff/Client): </label></td>
+                <td><input type="text" name="type" id="type"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>
+<%- include("../partials/footer") %>
