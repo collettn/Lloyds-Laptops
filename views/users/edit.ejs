@@ -1,25 +1,26 @@
-<%- include("../partials/header") %>
+<%- include("../partials/header_user") %>
     <form action="/user/edit/<%= data._id %>" method="POST" name="UserEdit">
         <fieldset>
-        <Table>            
-            <tr>
-                <td><label>First Name: </label></td>
-                <td><input type="text" class="form-control" name="firstname" id="firstname" value="<%=data.firstname %>" pleaceholder="FirstName"></td>
-            </tr>
-            <tr>
-                <td><label>Last Name: </label></td>
-                <td><input type="text" class="form-control" name="lastname" id="lastname" value="<%=data.lastname %>" pleaceholder="LastName"></td>
-            </tr>
-            <tr>
-                <td><label>Address: </label></td>
-                <td><input type="text" class="form-control" name="address" id="address" value="<%=data.address %>" pleaceholder="Address"></td>
-            </tr>
-            <tr>
-                <td><label>Type (Staff/Client): </label></td>
-                <td><input type="text" class="form-control" name="Type" id="Type" value="<%=data.type %>" pleaceholder="Type"></td>
-            </tr>
-        </Table>
+            <legend>Enter user details</legend>
+            <Table>            
+                <tr>
+                    <td><label>First Name: </label></td>
+                    <td><input type="text" class="form-control" name="firstname" id="firstname" value="<%=data.firstname %>" pleaceholder="FirstName"></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name: </label></td>
+                    <td><input type="text" class="form-control" name="lastname" id="lastname" value="<%=data.lastname %>" pleaceholder="LastName"></td>
+                </tr>
+                <tr>
+                    <td><label>Address: </label></td>
+                    <td><input type="text" class="form-control" name="address" id="address" value="<%=data.address %>" pleaceholder="Address"></td>
+                </tr>
+                <tr>
+                    <td><label>Type (Staff/Client): </label></td>
+                    <td><input type="text" class="form-control" name="Type" id="Type" value="<%=data.type %>" pleaceholder="Type"></td>
+                </tr>
+            </Table>
         </fieldset>
         <button type="submit" class="btn btn-info">Update</button>
     </form>
-<%- include("../partials/footer") %>
+<%- include("../partials/footer_page") %>

@@ -2,37 +2,38 @@
 <P> Welcome.  On this site we aim to support the redistribution of company laptops,<br>either to existing staff or external clients.</P>
 <p></p>
 <Table>
-    <thead>
-        <th>Laptops</th>
-        <th>Staff</th>
-        <th>Clients</th>
-    </thead>
     <tr>
-        <td>
-            <div id="container">
-                <a href="http://localhost:3000/laptops">
-                <img id="image" src="http://localhost:3000/images/ListAllLaptop.png">
-            </div>
+        <td><a href="http://localhost:3000/laptops">
+            <img src="http://localhost:3000/images/ListAllLaptop.png"></a>
         </td>
         <td><a href="http://localhost:3000/users/staff">
-            <img src="http://localhost:3000/images/ListAllStaff.png">
-            </a></td>
-        <td><img src="http://localhost:3000/images/ListAllClients.png">
-            </td>
+            <img src="http://localhost:3000/images/ListAllStaff.png"></a>
+        </td>
+        <td><a href="http://localhost:3000/users/clients">
+            <img src="http://localhost:3000/images/ListAllClients.png"></a>
+        </td>
     </tr>
     <tr>
-        <td><img id="image" src="http://localhost:3000/images/List-Assigned-Laptop.png"></td>
-        <td><img src="http://localhost:3000/images/AssignedtoStaff.png"></td>
-        <td><img src="http://localhost:3000/images/AssignedtoClients.png"></td>
+        <td><a href="http://localhost:3000/laptops/assigned">
+            <img src="http://localhost:3000/images/List-Assigned-Laptop.png"></a>
+        </td>
+        <td><a href="http://localhost:3000/staff/laptops">
+            <img src="http://localhost:3000/images/AssignedtoStaff.png">
+        </td>
+        <td><a href="http://localhost:3000/client/laptops">
+            <img src="http://localhost:3000/images/AssignedtoClients.png"></a>
+        </td>
     </tr>
     <tr>
-        <td><img id="image" src="http://localhost:3000/images/ListUnassignedLaptops.png"></td>
-        <td>assigned</td>
-        <td>assigned</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td colspan="2"><a href="http://localhost:3000/users">List of Users</a></td>
+        <td><a href="http://localhost:3000/laptops/unassigned">
+            <img id="image" src="http://localhost:3000/images/ListUnassignedLaptops.png"></a>
+        </td>
+        <td><a href="http://localhost:3000/staff/unassigned">
+            <img id="image" src="http://localhost:3000/images/StaffNeedingALaptop.png"></a>
+        </td>
+        <td><a href="http://localhost:3000/client/unassigned">
+            <img id="image" src="http://localhost:3000/images/ClientsNeedingALaptop.png"></a>
+        </td>
     </tr>
 </Table>
 <%- include("./partials/footer") %>

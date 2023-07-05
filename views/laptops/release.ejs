@@ -1,8 +1,8 @@
 <%- include("../partials/header_laptop") %>
     <p>Do you wish to delete this record?</p>
-    <form action="/laptop/delete/<%= data._id %>" method="post" name="LaptopDelete">
+    <form action="/laptop/release/<%= data._id %>" method="post" name="LaptopDelete">
         <fieldset>
-            <legend>Confirm laptop deletion</legend>
+            <legend>Confirm laptop release</legend>
             <Table>
                 <tr>            
                     <td><label>Model: </label></td>
@@ -34,6 +34,6 @@
                 </tr>
             </Table>
         </fieldset>
-        <button type="submit" class="btn btn-info">Delete</button>
+        <button type="submit" class="btn btn-info">Release</button>
     </form>
 <%- include("../partials/footer_page") %>

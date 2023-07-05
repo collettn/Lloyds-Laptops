@@ -11,12 +11,14 @@
                         <th class="class_th" scope="col">Memory</th>
                         <th class="class_th" scope="col">Usage</th>
                         <th class="class_th" scope="col">Status</th>
+                        <th class="class_th" scope="col">Assigned To</th>
                         <th class="class_th" width="200px">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                 <% if(data.length){
-                    for(var i = 0; i< data.length; i++) {%>
+                    for(var i = 0; i< data.length; i++) {
+                        if(data[i].user.type == assignedTo){ %>
                     <tr class="class_tr">
                         <td class="class_td" scope="row">
                             <%= (i+1) %>
@@ -42,15 +44,18 @@
                         <td class="class_td">
                             <%= data[i].status%>
                         </td>
+                        <td class="class_td">
+                            <%= data[i].user.firstname + " " + data[i].user.lastname%>
+                        </td>
                         <td class="class_td" Align="Right"> 
                             <a class="btn btn-success edit" href="../laptop/edit/<%= data[i]._id%>"><img class="image_button_small" src="http://localhost:3000/images/edit.png" title="Edit"></a>&nbsp 
-                            <a class="btn btn-success edit" href="../laptop/delete/<%= data[i]._id%>"><img class="image_button_small" src="http://localhost:3000/images/delete.png" title="Delete"></a>&nbsp 
+                            <a class="btn btn-success edit" href="../laptop/release/<%= data[i]._id%>"><img class="image_button_small" src="http://localhost:3000/images/release.png" title="Release"></a>&nbsp 
                         </td>
                     </tr>
-                    <% }
+                    <% }}
                 }else{ %>
                 <tr class="class_tr">
-                    <td class="class_td" colspan="8">No laptops</td>
+                    <td class="class_td" colspan="9">No laptops</td>
                 </tr>
                 <% } %>
                 </tbody>

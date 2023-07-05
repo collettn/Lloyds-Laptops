@@ -43,8 +43,7 @@
                             <%= data[i].status%>
                         </td>
                         <td class="class_td" Align="Right"> 
-                            <a class="btn btn-success edit" href="../laptop/edit/<%= data[i]._id%>"><img class="image_button_small" src="http://localhost:3000/images/edit.png" title="Edit"></a>&nbsp 
-                            <a class="btn btn-success edit" href="../laptop/delete/<%= data[i]._id%>"><img class="image_button_small" src="http://localhost:3000/images/delete.png" title="Delete"></a>&nbsp 
+                            <a class="btn btn-success edit" href="../laptop/assign/<%= data[i]._id%>/<%= user%>"><img class="image_button_small" src="http://localhost:3000/images/confirm.png" title="Confirm"></a> 
                         </td>
                     </tr>
                     <% }

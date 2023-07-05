@@ -1,6 +1,7 @@
-<%- include("../partials/header") %>
+<%- include("../partials/header_laptop") %>
     <form action="/laptop/edit/<%= data._id %>" method="post" name="LaptopEdit">
         <fieldset>
+            <legend>Enter laptop details</legend>
             <Table>
                 <tr>            
                     <td><label>Model: </label></td>
@@ -34,4 +35,4 @@
         </fieldset>
         <button type="submit" class="btn btn-info">Update</button>
     </form>
-<%- include("../partials/footer") %>
+<%- include("../partials/footer_page") %>
