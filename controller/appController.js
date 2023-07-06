@@ -134,7 +134,12 @@ const assignToUser = async (req, res, next) => {
         laptop.set({user: user});
         const savedLaptop = await laptop.save();
         res.locals.title = "All Laptops";
-        res.redirect('/laptops');
+        if(assignee.type == "Staff"){
+            res.redirect('/staff/laptops');    
+        } else {
+            res.redirect('/client/laptops');    
+        }
+        //res.redirect('/laptops');
     } 
     catch (err){
     }
