@@ -1,15 +1,17 @@
 <div class="top-right">
-    <ul>
-    <% if(title.includes("Staff")){%>
-        <li><a href="http://localhost:3000/users/staff">All</a></li>
-        <li><a href="http://localhost:3000/staff/laptops">Assigned</a></li>
-        <li><a href="http://localhost:3000/staff/unassigned">Unassigned</a></li>
-        <li><a href="http://localhost:3000/user/add">Add New</a></li>
-    <% } else { %>
-        <li><a href="http://localhost:3000/users/clients">All</a></li>
-        <li><a href="http://localhost:3000/client/laptops">Assigned</a></li>
-        <li><a href="http://localhost:3000/client/unassigned">Unassigned</a></li>
-        <li><a href="http://localhost:3000/user/add">Add New</a></li>
-    <% } %> 
-    </ul>
+    <div class="wrapper">
+        <div class="navbar">
+            <% if(title.includes("Staff")){%>
+                <div li class="navItem"><a class="nb-link" href="http://localhost:3000/users/staff">All Staff</a></div>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/staff/laptops">Assigned</a></div>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/staff/unassigned">Unassigned</a></div>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/user/add">Add New</a></div>
+            <% } else { %>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/users/clients">All Clients</a></div>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/client/laptops">Assigned</a></div>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/client/unassigned">Unassigned</a></div>
+                <div class="navItem"><a class="nb-link" href="http://localhost:3000/user/add">Add New</a></div>
+            <% } %> 
+        </div>
+    </div>
 </div>
