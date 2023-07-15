@@ -3,7 +3,8 @@ import Laptop from '../models/laptops.js'
 
 const showHome = (req, res, next) => {
     res.locals.title = "All Laptops";
-    res.render("/laptops")
+    console.log("Info: Show Home Page");
+    res.redirect("/laptops")
 }
 
 // ** User Functions **
